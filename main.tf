@@ -1,6 +1,7 @@
 resource "null_resource" "foo" {}
 
 data "terraform_remote_state" "test" {
+    backend = "remote"
     workspace = "alexs-tfe-test"
 }
 
