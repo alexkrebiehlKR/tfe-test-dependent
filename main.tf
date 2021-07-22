@@ -11,5 +11,5 @@ data "terraform_remote_state" "test" {
 }
 
 output "test" {
-  value = "hello ${data.terraform_remote_state.test.hello}"
+  value = "hello ${data.terraform_remote_state.test.outputs.hello}"
 }
