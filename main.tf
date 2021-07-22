@@ -1,11 +1,15 @@
 resource "null_resource" "foo" {}
 
 data "terraform_remote_state" "test" {
-    backend = "remote"
+  backend = "remote"
+  config = {
     organization = "kroger-digital-kps"
-    workspace = "alexs-tfe-test"
+    workspaces = {
+      name = "alexs-tfe-test"
+    }
+  }
 }
 
 output "test" {
-    value = "hello ${data.terraform_remote_state.test.hello}"
+  value = "hello ${data.terraform_remote_state.test.hello}"
 }
