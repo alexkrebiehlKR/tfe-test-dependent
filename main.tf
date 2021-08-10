@@ -1,5 +1,5 @@
 resource "null_resource" "foo" {}
 
 output "test" {
-  value = "hello test2"
+  value = "hello test3"
 }
