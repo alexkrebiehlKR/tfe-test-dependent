@@ -6,7 +6,7 @@ data "terraform_remote_state" "bootstrap" {
   config = {
     organization = "kap-api-sandbox"
     workspaces = {
-      name = var.remote_ws_name
+      name = "team1-bootstrap"
     }
   }
 }
